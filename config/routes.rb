@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   end
 
   resources :posts, only: [:index, :show, :new, :create, :edit, :update]
-
+  
+  get '/stats', to 'stats#index'
+  
   root 'posts#index'
 end
